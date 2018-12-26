@@ -9,6 +9,8 @@ export default class StartScript extends cc.Component {
     SetNode:cc.Node = null;
     @property(cc.Node)
     HelpNode:cc.Node = null;
+    @property(cc.AudioClip)
+    BgAudioClip:cc.AudioClip = null;
 
     // LIFE-CYCLE CALLBACKS:
 
@@ -34,7 +36,6 @@ export default class StartScript extends cc.Component {
     }
 
     openSetSc(){
-        // this.destroy();
         let self = this;
         self.SetNode.active = true;
         self.node.getChildByName("Setting").active = false;
